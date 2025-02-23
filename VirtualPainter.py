@@ -1,18 +1,18 @@
-import cv2 #for working images and videos using opencv 
-import numpy as np #handling arrays and mathematical operations
-import time #for tracking time
-import os #to handle file and folder operation
-import math #handle mathematical calculations
-import HandTrackingModule as htm #used to track hand movements
+import cv2 
+import numpy as np 
+import time 
+import os 
+import math 
+import HandTrackingModule as htm
 
 def save_canvas(canvas, filename="drawing.png"):
-    timestamp = time.strftime("%Y%m%d_%H%M%S")  # Get current timestamp
-    unique_filename = f"drawing_{timestamp}.png"  # Add timestamp to the filename
+    timestamp = time.strftime("%Y%m%d_%H%M%S")  
+    unique_filename = f"drawing_{timestamp}.png"  
     cv2.imwrite(unique_filename, canvas)
     print(f"Canvas saved as {unique_filename}")
 
-brushThickness = 15 #sets the thickness of the drawing brush
-eraserThickness = 50 #sets the thickness of the eraser
+brushThickness = 15 
+eraserThickness = 50 
 
 folderPath = r"C:\Users\riyap\OneDrive\Pictures\MajorProjectDuplicate\HandTrackingProject\header" #points to the folder containing header images
 myList = os.listdir(folderPath) #lists all files in the folderPath directory
